@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/all-web-solutions/static/js/main.bacc91b0.js",
+    "static/media/backgroundvideo.mp4": "/all-web-solutions/static/media/backgroundvideo.9d1f2511b201fd07fd96.mp4",
+    "static/media/logo.png": "/all-web-solutions/static/media/logo.f0dff5a264420aee0a9a.png",
+    "index.html": "/all-web-solutions/index.html",
+    "main.bacc91b0.js.map": "/all-web-solutions/static/js/main.bacc91b0.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bacc91b0.js"
+  ]
+}
