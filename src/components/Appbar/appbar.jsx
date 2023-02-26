@@ -2,7 +2,6 @@
 import React  from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
-import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import  CardMedia from '@mui/material/CardMedia';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -13,33 +12,48 @@ import video from '../../common-components/Assets/backgroundvideo.mp4'
 import logo from '../../common-components/Assets/logo.png'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-const useStyles = makeStyles(theme=>(
+import { useTheme } from '@mui/material/styles';
+import {__tablet} from '../../common-components/matches'
+import { useNavigate } from 'react-router-dom';
+const useStyles = makeStyles(_theme=>(
     
     {
     
     logo:{
-       height: '70px',
-    //    color: theme.palette.primary.main
+      cursor: 'pointer',
+      width: '89px',
+      background: 'navajowhite',
+      borderRadius: '61px',
+      radius: '9px',
+      height: '89px',
+    },
+    appBar: {
+      background: 'red'
     }
 }))
 
 
 
 
-const AppBarHeader = (props) => {
+const AppBarHeader = (props:any) => {
+  const tabletS = __tablet();
+  const navigate = useNavigate();
+
+  const theme = useTheme();
+  // const matches = useMediaQuery(theme.breakpoints.down('sm'))
  const classes = useStyles();
  const [value, setValue] = React.useState(0);
 
     console.log(classes)
 
-    const HideOnScroll = (props) => {
+    const HideOnScroll = (props:any) => {
         const { children, window } = props;
 
  
 
         // Note that you normally won't need to set the window ref as useScrollTrigger
         // will default to window.
-        // This is only being set here because the demo is in an iframe.
+        // This is only being set here because the demo is in an iframe. 
         const trigger = useScrollTrigger({
           target: window ? window() : undefined,
         });
@@ -52,8 +66,8 @@ const AppBarHeader = (props) => {
           </Slide>
         );
       }
-
-      const handleChange = (event, newValue) => {
+  
+      const handleChange = (_event:any, newValue:any) => {
         setValue(newValue);
       };
     
@@ -68,19 +82,28 @@ const AppBarHeader = (props) => {
     return (
 <React.Fragment>
 <CssBaseline />
-<HideOnScroll {...props}>
-  <AppBar>
+<HideOnScroll {...props}>  
+  <AppBar sx={{background: '#00bcd4'}}>
     <Toolbar>
-      <Typography variant="h6" component="div">
-        All Web Solutions
-      </Typography>
+   {/* {tabletS ? <IconButton
+        size="large"
+        edge="start"
+        color="inherit"
+        aria-label="menu"
+        sx={{ mr: 2 }}
+      >
+        <MenuIcon />
+      </IconButton> : null} */}
+   
+      {!tabletS ? <><img onClick={()=>navigate('/')} className={classes.logo} src={logo} /></> : <></>}
       <Tabs 
       textColor='white'
       indicatorColor='red'
       sx={{ width: '40%', bgcolor: 'none',margin: "0 0 0 46%" }}
       value={value} onChange={handleChange} 
       centered>
-        <Tab label="About " />
+         <Tab onClick={()=>navigate('/')} label="Home " />
+        <Tab onClick={()=>navigate('/about')} label="About " />
         <Tab label="Services" />
         <Tab label="Projects" />
         <Tab label="Blog" />

@@ -1,11 +1,11 @@
 import {combineReducers} from 'redux';
-import userReducers from '../Reducers/userReducers';
+import {clientPostReducers} from '../Reducers/clientReducers';
 
 
 
 
 const rootReducer = combineReducers({
-    userDetails : userReducers
+    clientDetails : clientPostReducers
 });
 
 
