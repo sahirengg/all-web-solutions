@@ -1,0 +1,16 @@
+{
+
+    "MONGOURI": "mongodb+srv://sahir:sahir94anees@cluster0.k5b7f0g.mongodb.net/?retryWrites=true&w=majority",
+    "COMPANY_EMAIL":"info@awsolutionsltd.com",
+    "EMAIL_PASS": "lwiedllgsmfukjrz",
+      "CONTACT_PERSON": "Saba Jamal",
+      "COMPANY_NAME": "All Web Solutions",
+       "MESSAGE": "This is the testing email sent for the testing purpose",
+       "SUBJECT": "Meeting confirmation email",
+       "PORT": 465,
+       "EMAIL_HOST": "smtp.gmail.com",
+       "SERVICE": "gmail",
+       "MOB_NO": "9318304518"
+    }
+
+
