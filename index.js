@@ -5,10 +5,8 @@ const connectDB = require('./config/db');
 const cors = require('cors');
 const  bodyParser = require('body-parser');
 // const userExistRouter = require('./routes/userExistsRoute')
-
-const PORT =  5000;
-
-
+const dotenv = require('dotenv')
+dotenv.config();
 
 const app = express();
 // database connection
@@ -32,6 +30,9 @@ app.use('/api', clientRouter);
 
 
 
-app.listen(PORT,()=>{
-    console.log(`server is listening on ${PORT}`)
+app.listen(process.env.API_PORT,()=>{
+    console.log(`server is listening on ${process.env.API_PORT}`)
 })
+
+
+module.exports = app;

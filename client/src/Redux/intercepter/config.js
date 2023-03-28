@@ -1,8 +1,5 @@
-const localbaseURl = "http://localhost:5000/api";
-
-
 export const saveClientInfo = {
-  postClientData: `${localbaseURl}/client`,
-  uniqueEmailAPi: `${localbaseURl}/clientExist`
+  postClientData: `${process.env.REACT_APP_API_URL}/client`,
+  uniqueEmailAPi: `${process.env.REACT_APP_API_URL}/clientExist`
 }
 

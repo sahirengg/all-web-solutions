@@ -10,12 +10,11 @@ import '@fontsource/roboto/700.css';
 import AboutUs from './pages/About-us/about'
 import Footer from "./components/Footer/footer";
 import { Container} from "@mui/system";
-import ContactUs from './pages/Contact-us/contactUs'
-import {useLocation} from 'react-router-dom'
+import ContactUs from './pages/Contact-us/contactUs';
 function App() {
   const tabletS = __tablet();
 
-  
+  console.log("process---",process.env.REACT_APP_API_URL)
 
   return (
     <>
