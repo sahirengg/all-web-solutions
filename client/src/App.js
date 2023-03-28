@@ -9,11 +9,10 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import AboutUs from './pages/About-us/about'
 import Footer from "./components/Footer/footer";
-import { Container,Box} from "@mui/system";
+import { Container} from "@mui/system";
 import ContactUs from './pages/Contact-us/contactUs'
 import {useLocation} from 'react-router-dom'
 function App() {
-  const location = useLocation()
   const tabletS = __tablet();
 
   
