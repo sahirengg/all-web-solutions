@@ -1,12 +1,11 @@
 const mongoose = require("mongoose");
-const config = require('config');
-const db = config.get('MONGOURI')
+
 
 
 const connectDB = async () => {
     try {
       console.log("mongodb connected succesfully")
-       (mongoose.connect(db, { useNewUrlParser: true,useUnifiedTopology: true}));
+       (mongoose.connect(process.env.MONGO_ATLAS, { useNewUrlParser: true,useUnifiedTopology: true}));
       
 
     }  catch (error) {
