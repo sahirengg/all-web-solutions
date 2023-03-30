@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkaws_portfolio=self.webpackChunkaws_portfolio||[]).push([[801],{9371:function(t,e,i){i.r(e),i.d(e,{default:function(){return a}});i(2791);var s=i.p+"static/media/aboutImg.b9c36099e6d7fcd99fd8.jpg",u=i(184),a=function(){return(0,u.jsx)("img",{style:{maxHeight:"608px",width:"100%"},src:s})}}}]);
-//# sourceMappingURL=801.07e3cb93.chunk.js.map
